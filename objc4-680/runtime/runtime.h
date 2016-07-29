@@ -52,8 +52,8 @@ typedef struct objc_category *Category;
 /// An opaque type that represents an Objective-C declared property.
 typedef struct objc_property *objc_property_t;
 
-struct objc_class {
-    Class isa  OBJC_ISA_AVAILABILITY;
+struct objc_class {        //类的结构
+    Class isa  OBJC_ISA_AVAILABILITY;     //对象就只包含这个指针，类还有下面哪些东西
 
 #if !__OBJC2__
     Class super_class                                        OBJC2_UNAVAILABLE;
